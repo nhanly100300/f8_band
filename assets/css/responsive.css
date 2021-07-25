@@ -1,0 +1,86 @@
+/* PC */
+@media (min-width:1024px   ){
+
+}
+/* TABLET   &&  */  /* MOBILE */
+
+@media(max-width:1023px){
+    .btn{
+        padding: 16px 20px;
+    }
+    .contact-form .form-control {
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    #footer .social-list {
+        font-size: 48px;
+    }
+    #footer .social-list a {
+        margin: 0px 8px;
+    }
+
+#footer .coppyright {
+    padding: 12px 0px;
+    display: inline-block;
+}
+.contact-submit-btn{
+    font-size: 16px;
+        
+}
+}
+/* TABLET    */
+ @media (min-width:740px    )and (max-width:1023px){
+    .contact-info {
+        line-height: 1.8;
+    }
+ }
+ /* MOBILE */
+ @media(max-width:739px){
+     .full-wight,
+     .s-col-full{
+        width: 100%  !important; 
+     }
+     .s-mt-8{
+         margin-top: 8px !important;
+     }
+     #header{
+        overflow: hidden;
+     }
+    #nav{
+         display: block;
+     }
+    #nav > li{
+        display: block;
+    }
+    #nav li a {
+        padding: 1px 24px;
+    }
+    #nav >li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav {
+        position: initial; /*trả về giá trị mặt định*/
+        background-color: #000;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 1px 42px;
+    }
+    #header .search-btn{
+        display: none;
+    }
+    #header .menu-mobile-btn {
+        display: block;
+    }
+    #content .member-img {
+        width: 60%;
+    }
+    .contact-form {
+        margin-top: 32px;
+    }
+    #footer .social-list {
+        font-size: 32px;
+    }
+    
+ }
