@@ -73,6 +73,9 @@
     #header .menu-mobile-btn {
         display: block;
     }
+    .text-content{
+        display: none;
+    }
     #content .member-img {
         width: 60%;
     }

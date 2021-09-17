@@ -41,9 +41,31 @@
          <!-- end button search -->
         </div>
         <div id="slider">
-            <div class="text-content">
-                <h2 class="text-hellding">NEW YORK</h2>
-               <dev class="text-description">The atmosphere in New york is lor</dev>
+            <div class="slides ">
+                <input type="radio" name="radio-btn" id="radio-1">
+                <input type="radio" name="radio-btn" id="radio-2">
+                <input type="radio" name="radio-btn" id="radio-3">
+                <div class="slide first">
+                    <img src="./assets/img/Slider/Slider3.jpg" alt="">
+                    <div class="text-content">
+                        <h2 class="text-hellding">NEW YORK</h2>
+                       <dev class="text-description">The atmosphere in New york is lor</dev>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/img/Slider/Slider2.jpg" alt="">
+                    <div class="text-content">
+                        <h2 class="text-hellding">NEW YORK</h2>
+                       <dev class="text-description">The atmosphere in New york is lor</dev>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/img/Slider/Slider4.jpg" alt="">
+                    <div class="text-content">
+                        <h2 class="text-hellding">NEW YORK</h2>
+                       <dev class="text-description">The atmosphere in New york is lor</dev>
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -54,7 +76,7 @@
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>     
-                <div class="row member-list" s-col-full>
+                <div class="row member-list s-col-full">
                     <div class=" col col-third s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/Team/band.jpg" alt="Name" class="member-img">
@@ -79,7 +101,7 @@
                 <ul class="tickets-list">
                     <li>September <span class="sold-out">Sold out</span></li>
                     <li>October  <span class="sold-out">Sold out</span></li>
-                    <li>November  <span class="ticket-quantity">3</span></li>
+                    <li>November  <span class="quantity">3</span></li>
                 </ul>
                 <!-- Places -->
                 <div class="row places-Lists">
@@ -199,59 +221,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var header = document.getElementById('header')
-        var mobileMenu =document.getElementById('mobile-menu')
-        var headerHeight = header.clientHeight
-        // đóng / mở menu mobile
-        mobileMenu.onclick= function(){
-            var isClosed = header.clientHeight === headerHeight
-            if(isClosed){
-                header.style.height = 'auto'
-            }else{
-                header.style.height = null
-            }
-        }
-       //Tự động đóng khi chọn menu
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
-        for(var i =0 ; i<menuItems.length;i++){
-            var menuItem = menuItems[i];
-            menuItem.onclick = function(){
-                var isParenMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav') 
-                if(isParenMenu){
-                    event.preventDefault();
-                
-                }else{
-                    header.style.height = null
-                }
-            }
-        }
-    </script>
-    <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket'); 
-        const modal = document.querySelector('.js-modal');
-        const modalClose = document.querySelector('.js-modal-close');
-        const modalContainer = document.querySelector('.js-modal-container');
-        //hàm hiển thị modal buyTickets
-        function showBuyTicket(){
-            modal.classList.add('open');
-        }
-        //Hàm ẩn modal buyTickets
-        function hideBuyTicket(){
-            modal.classList.remove('open');
-        }
-        //lặp qua từng thẻ button và nghe click
-        for(const buyBtn of buyBtns ){
-            buyBtn.addEventListener('click', showBuyTicket)
-        }
-        //nghe click để close
-        modalClose.addEventListener('click', hideBuyTicket)
-
-        modal.addEventListener('click' , hideBuyTicket)    
-
-        modalContainer.addEventListener('click' , function(event){
-            event.stopPropagation();
-        })
-    </script>
 </body>
+<script src="./assets/js/main.js"></script>
 </html>
